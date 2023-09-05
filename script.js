@@ -11,3 +11,13 @@ function convertTime() {
   const resultElement = document.getElementById("result");
   resultElement.textContent = `Converted Time: ${toTime.toLocaleTimeString()}`;
 }
+
+function updateTime() {
+  const currentTimeElement = document.getElementById("current_time");
+  const currentTime = new Date().toLocaleTimeString();
+  currentTimeElement.innerHTML = currentTime;
+}
+
+setInterval(updateTime, 1000);
+
+updateTime();
